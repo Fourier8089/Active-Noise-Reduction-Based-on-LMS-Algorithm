@@ -1,0 +1,117 @@
+module
+	Top(
+		clk,
+		reset,
+		xn,
+		dn,
+		e
+    );
+    input clk,reset;
+    input signed [15:0] xn,dn;
+    output signed [15:0] e;
+    wire signed [15:0] x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15;
+    wire signed [15:0] y;
+    wire signed [29:0] w0,w1,w2,w3,w4,w5,w6,w7,w8,w9,w10,w11,w12,w13,w14,w15;
+	data data_0(
+		.reset(reset),
+		.clk(clk),
+		.xn(xn),
+		.x0(x0),
+		.x1(x1),
+		.x2(x2),
+		.x3(x3),
+		.x4(x4),
+		.x5(x5),
+		.x6(x6),
+		.x7(x7),
+		.x8(x8),
+		.x9(x9),
+		.x10(x10),
+		.x11(x11),
+		.x12(x12),
+		.x13(x13),
+		.x14(x14),
+		.x15(x15)
+    );
+	error error_0(
+		.reset(reset),
+		.clk(clk),
+		.y(y),
+		.d(dn),
+		.e(e)
+    );
+	filter_out filter_out_0(
+		.reset(reset),
+		.clk(clk),
+		.x0(x0),
+		.x1(x1),
+		.x2(x2),
+		.x3(x3),
+		.x4(x4),
+		.x5(x5),
+		.x6(x6),
+		.x7(x7),
+		.x8(x8),
+		.x9(x9),
+		.x10(x10),
+		.x11(x11),
+		.x12(x12),
+		.x13(x13),
+		.x14(x14),
+		.x15(x15),
+		.w0(w0),
+		.w1(w1),
+		.w2(w2),
+		.w3(w3),
+		.w4(w4),
+		.w5(w5),
+		.w6(w6),
+		.w7(w7),
+		.w8(w8),
+		.w9(w9),
+		.w10(w10),
+		.w11(w11),
+		.w12(w12),
+		.w13(w13),
+		.w14(w14),
+		.w15(w15),
+		.y(y)		
+    );
+	w_update w_update_0(
+		.reset(reset),
+		.clk(clk),
+		.x0(x0),
+		.x1(x1),
+		.x2(x2),
+		.x3(x3),
+		.x4(x4),
+		.x5(x5),
+		.x6(x6),
+		.x7(x7),
+		.x8(x8),
+		.x9(x9),
+		.x10(x10),
+		.x11(x11),
+		.x12(x12),
+		.x13(x13),
+		.x14(x14),
+		.x15(x15),
+		.w0(w0),
+		.w1(w1),
+		.w2(w2),
+		.w3(w3),
+		.w4(w4),
+		.w5(w5),
+		.w6(w6),
+		.w7(w7),
+		.w8(w8),
+		.w9(w9),
+		.w10(w10),
+		.w11(w11),
+		.w12(w12),
+		.w13(w13),
+		.w14(w14),
+		.w15(w15),
+		.e(e)
+    );
+endmodule
